@@ -1,0 +1,10 @@
+namespace: screwdriver-cd-test
+name: test-distrusted-template
+version: '1.0'
+description: template for testing
+maintainer: test@example.com
+config:
+    image: node:14
+    steps:
+        - install: echo 'install'
+        - test: echo 'test'
