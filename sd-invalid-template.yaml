@@ -1,0 +1,9 @@
+namespace: screwdriver-cd-test
+name: test-template
+version: '1.0'
+maintainer: test@example.com
+config:
+    image: 2
+    steps:
+        - install: echo 'install'
+        - test: echo 'test'

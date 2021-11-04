@@ -1,0 +1,16 @@
+shared:
+    image: node:14
+    annotations:
+        publish: &publish
+            steps:
+                - install: npm install screwdriver-template-main
+                - publish: ./node_modules/.bin/template-publish
+jobs:
+    publish-valid:
+        <<: *publish
+        environment:
+            SD_TEMPLATE_PATH: ./sd-init-template.yaml
+    publish-invalid:
+        <<: *publish
+        environment:
+            SD_TEMPLATE_PATH: ./sd-invalid-template.yaml
