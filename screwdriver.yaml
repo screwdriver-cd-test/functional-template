@@ -46,14 +46,3 @@ jobs:
         <<: *publish
         environment:
             SD_TEMPLATE_PATH: ./sd-distrusted-template.yaml
-    use-template:
-        template: screwdriver-cd-test/test-template@1.0.0
-    custom-template:
-        image: node:12
-        template: screwdriver-cd-test/test-template@1.0.0
-        steps:
-            - preinstall: echo 'preinstall'
-            - postinstall: echo 'postinstall'
-            - pretest: echo 'pretest'
-            - test: echo 'override'
-            - posttest: echo 'posttest'
