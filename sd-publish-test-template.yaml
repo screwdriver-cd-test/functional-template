@@ -4,7 +4,7 @@ version: '1.0'
 description: template for testing for publish
 maintainer: test@example.com
 config:
-    image: node:14
+    image: node:18
     steps:
         - install: echo 'install'
         - test: echo 'test'
